@@ -13,6 +13,7 @@ See example scriplets in `examples/`.
 
 ## Build juju-doctor
 ```
+export GOPRIVATE=github.com/canonical/*
 make build
 ```
 This will generate a GO binary `juju-doctor` inside `./bin`

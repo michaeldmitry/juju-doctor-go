@@ -71,5 +71,11 @@ func main() {
 	if err := starlarkEngine.FireStatusReadyEvent(ctx, flags.Model); err != nil {
 		log.Fatalf("error firing status ready event %s", err.Error())
 	}
+	if err := starlarkEngine.FireBundleReadyEvent(ctx, flags.Model); err != nil {
+		log.Fatalf("error firing bundle ready event %s", err.Error())
+	}
+	if err := starlarkEngine.FireShowUnitReadyEvent(ctx, flags.Model); err != nil {
+		log.Fatalf("error firing show-unit ready event %s", err.Error())
+	}
 
 }

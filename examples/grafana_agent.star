@@ -1,7 +1,7 @@
 def init():
-    jujudoctor.observe('status_ready', on_status_ready)
+    jujudoctor.observe('status', on_status)
 
-def on_status_ready(event):
+def on_status(event):
     """Handler for juju status event."""
     status = event.input
     agents = {}
